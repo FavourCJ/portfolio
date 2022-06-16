@@ -1,0 +1,772 @@
+*{
+    text-decoration: none;
+  }
+
+  
+  button{
+    cursor: pointer;
+  }
+  
+  .landing-container{
+    background-color: #1F1F29;
+    width: auto;
+    height: calc(140vh - 50px) auto;
+    padding-bottom: 30px;  
+  }
+  
+  .menu-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .mobile-menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    margin: 40px 10px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    display: none;
+    
+  }
+  
+  .menu{
+    padding-top: 35px;   
+  }
+  
+  .menu-cv{
+    display: flex;
+  }
+  
+  #hidden {
+    display: flex;
+  }
+  
+  .menu-link{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px; 
+    font-weight: 500;  
+  }
+  
+  .menu-link:hover{
+    color: #FFC107;
+  }
+  
+  .logo{
+    color: #FFC107;
+    margin-left: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 30px;    
+  }
+  
+  .web-h1{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 24px;
+  
+  }
+  
+  .cv{
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #FFC107;
+    color: black;
+    padding: 10px 20px;
+    height: 30px;
+    text-decoration: none;
+    
+  }
+ .skills-container{
+    margin: 0px 125px 50px;
+    
+  }
+    
+  .cv:hover{
+    color: whitesmoke;
+    border: 1px solid #FFC107;
+    background-color: transparent;
+  }
+  
+  .cv-container{
+      display: flex;
+      margin-top: 30px;
+  }
+  
+  .image-container{
+    background-color: black;
+    width: 150vh;
+    height: 60vh;
+    margin: 30px 200px;
+    
+  }
+  
+  .intro-container{
+    display: flex;
+    margin-left: 370px;
+    color: #FFC107;
+  }
+  
+  .intro-p{
+    font-weight: 600;
+    font-size: 19px;
+    margin-right: 60px;
+    color: #FFC107;
+  
+  }
+  
+ 
+  .sub-skills{
+    background-color: #2c2c3774;
+    width: 300px ;
+    padding: 10px 30px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
+  }
+  
+  .skills-container{
+    margin: 0px 125px 50px;
+    
+  }
+  
+  .skill-img{
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+  
+  .description-language{
+    font-size: 15px;
+    margin: 10px 0px 20px;
+    font-style: italic;
+  }
+
+  .view{
+    color: black;
+    background-color: #FFC107;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .view:hover{
+    color: whitesmoke;
+    background-color: transparent;
+    border: 1px solid #FFC107;
+  }
+  
+  .code{
+    color: whitesmoke;
+    border: 1px solid #FFC107;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .code:hover{
+    background-color: #ca9907;
+    color: black;
+  }
+  
+  .contact{
+    font-weight: 600;
+    font-size: 17px;
+   
+  }
+  .contact-info{
+    margin-left: 3px;
+    font-weight: 400;
+  }
+  
+  .icon{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #FFC107;
+    justify-content: left;
+  }
+  
+  .icon-p{
+    text-align: center;
+    font-weight: 600;
+    color: whitesmoke;
+    margin-left: 10px;
+    font-size: 17px;
+    
+  }
+  
+  .icon-container{
+    padding: 10px 30px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    display: block;
+  
+  }
+  
+  .contact-link{
+    color: whitesmoke;
+    text-decoration: underline;
+  }
+  
+  .contact-link:hover{
+    color: lightblue;
+  }
+  
+  .icon-text-container{
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .input{
+    width: 400px;
+    background-color:#1F1F29;
+    border: 1px solid grey;
+    height: 55px;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    display: block;
+   
+  }
+  
+  .input-message{
+    font-size: 17px;
+    height: 150px;
+    background-color:#1F1F29;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    width: 400px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .form{
+    padding: 10px 30px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    margin-top: 30px;
+    height: 400px auto;
+   
+  }
+  
+  .btn{
+    color: black;
+    background-color: #FFC107;
+    border: none;
+    width: 250px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 19px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .error{
+      color: red;
+      padding-bottom: 25px;
+      margin-top: -28px;
+      font-weight: 400;
+      font-size: 16px;
+  }
+  
+  .profile{
+    width: 100px;
+    border-radius: 100%;
+  }
+  
+  .profile-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .myname{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 17px;
+  }
+  
+  .career{
+    text-align: center;
+    font-weight: 17px;
+    color: rgb(183, 181, 181);
+    margin-top: -15px;
+  }
+  
+  .location{
+    font-size: 17px;
+    margin-left: 25px;
+    font-weight: 500;
+  }
+  
+  .location-p{
+    font-weight: 400;
+    margin-left: 40px;
+    
+  }
+  
+  .location-pi{
+    font-weight: 400;
+    margin-left: 80px;
+  }
+  
+  .location-pii{
+    font-weight: 400;
+    margin-left: 89px;
+  }
+  
+  .location-container{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid grey;
+  }
+  
+  .speak{
+    margin-left: 20px;
+    font-style: italic;
+    font-size: 16px;
+  }
+  
+  .footer{
+    color: grey;
+    text-align: center;
+    border-top: 1px solid grey;
+    margin-top: 40px;
+  }
+  
+  .footer-p{
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .description-language-backend{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    top: -10px;
+    font-weight: 500;
+  }
+
+  .description-language-frontend{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .description-p{
+    font-size: 15px;
+  }
+  
+  .email-link{
+    margin-left: 5px;
+    font-size: 15px;
+    text-decoration: underline;
+    margin-right: 5px;
+  }
+  
+  .profile-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  
+  .myname{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 17px;
+  }
+  
+  .career{
+    text-align: center;
+    font-weight: 17px;
+    color: rgb(183, 181, 181);
+    margin-top: -15px;
+  }
+  
+  .location{
+    font-size: 17px;
+    margin-left: 25px;
+    font-weight: 500;
+  }
+  
+  .location-p{
+    font-weight: 400;
+    margin-left: 40px;
+    
+  }
+  
+  .location-pi{
+    font-weight: 400;
+    margin-left: 80px;
+  }
+  
+  .location-pii{
+    font-weight: 400;
+    margin-left: 89px;
+  }
+  
+  .location-container{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid grey;
+  }
+  
+  .speak{
+    margin-left: 20px;
+    font-style: italic;
+    font-size: 16px;
+  }
+  
+  .footer{
+    color: grey;
+    text-align: center;
+    border-top: 1px solid grey;
+    margin-top: 40px;
+  }
+  
+  .footer-p{
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .sub-skills-list-web{
+    color: whitesmoke;
+    margin-right: 40px;
+    padding: 30px 30px;
+    background-color: #2c2c3774;
+    width: 370px auto;
+    height: 60vh auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
+    
+  }
+  
+  .email-link{
+    margin-left: 5px;
+    font-size: 15px;
+    text-decoration: underline;
+    margin-right: 5px;
+    color: blue;
+  }
+  
+  .skills-h1{
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0px 10px 20px;
+   
+  }
+  
+  .skills{
+      display: flex;
+  }
+  
+  .progress-js{
+    margin-top: -15px;
+  }
+  
+  .progress{
+    margin-top: -12px;
+  }
+  
+  .progress-container{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
+    margin-left: 120px; 
+    width: 70vh;
+    padding: 20px 40px;
+    color: whitesmoke;
+  }
+  
+  .progress-h1{
+      margin-left: 120px;
+      color: whitesmoke;
+      font-size: 25px;
+  }
+  
+  .about-h1{
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0px 125px 20px;
+  }
+  
+  .all-about{    
+    margin-top: 50px;
+  }
+  
+  .form-container{
+    width: 650px ;
+    background-color: #1F1F29;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
+    margin: 0px 125px 0px;
+    padding: 10px 30px 50px 0px;
+  }
+  
+  .about-container{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
+    width: 500px;
+    padding: 10px 30px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    margin: 0px 125px 50px;
+   
+  }
+  
+  .percent{
+    margin-right: 20px;
+   
+  }
+  
+  .lan-info{
+    font-size: 16px;
+  }
+  
+  .percentage{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  @media only screen and (max-width: 330px){
+    
+    
+      .skills-h1{
+        color: whitesmoke;
+        font-weight: 600;
+        font-size: 24px;
+        margin: 0px 10px 20px;
+       
+      }
+  }
+  
+  
+  @media only screen and (max-width: 830px){
+    .landing-container{
+        
+        width: auto;
+        width: auto;
+        height: calc(140vh - 50px) auto;
+    }
+  
+    .menu{
+        display: none;
+    }
+  
+    .cv-container{
+        display: none;
+        margin-top: 260px;
+        
+    }
+      
+  .intro-p{
+    font-weight: 500;
+    font-size: 17px;
+    margin-right: 50px;
+    color: #FFC107;
+    display: flex;
+  
+  }
+  
+    .cv{
+        width: 130px;
+        border-radius: 10px; 
+        color: #FFC107;
+        background-color: transparent;
+        border: 1px solid #FFC107;   
+    }
+   
+    .cv:hover{
+        background-color: #FFC107;
+        color: black;
+    }
+  
+    .mobile-menu-icon{
+        display: flex;
+        margin-right: 30px;
+    }
+  
+    .all-about{
+        position: relative;
+        right: 100px;
+        margin-top: 40px;
+    }
+  
+    .about-container{
+        width: 380px;
+      }
+  
+      .get-in-touch{
+          position: relative;
+          right: 100px;
+      }
+  
+      .form-container{
+        width: 405px ;
+        margin: 0px 125px 0px;
+        padding: 5px 30px 0px 0px;
+      }
+  
+     #hidden {
+       position: absolute;
+       left: 0px;
+       top: 80px;
+       width: 500px;
+       background-color: #1F1F29;
+       display: flex;
+       flex-direction: column;
+       align-items: left;
+       padding-left: 30px;
+       max-height: 300px;
+    }
+  
+    #hidden a {
+        margin: 10px;
+        text-align: left;
+    }
+  
+    .intro-container{
+        position:relative; 
+        right: 240px;
+        font-size: 5px;
+        color: red;
+        margin-bottom: 20px;
+  
+    }
+  
+    .input{
+        width: 350px;
+      }
+      
+      .input-message{
+        width: 350px;
+        
+      }
+      
+  
+    .image-container{
+        background-color: black;
+        width: auto ;
+        height: auto;
+        margin: 30px 35px;
+        position:relative; 
+        right: 10px;
+        
+    }
+  
+    .progress-h1{
+        position:relative; 
+        right: 100px;
+    }
+  
+    .sub-skills{
+        background-color: #2c2c3774;
+        width: 300px ;
+        padding: 10px 30px;
+        padding-bottom: 10px;
+        color: whitesmoke;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
+        position:relative; 
+        right: 80px;
+        
+      }
+  
+      .skills{
+        display: block;
+    }
+  
+      .web-h1{
+        color: whitesmoke;
+        font-weight: 500;
+        font-size: 20px;
+      
+      }
+  
+      .progress-container{
+        position: relative; 
+        right: 100px;
+      }
+  
+      .skills-h1{
+        color: whitesmoke;
+        font-size: 25px;
+        position: relative; 
+        right: 100px;   
+      }
+  
+      .sub-skills-list-web{
+          margin-bottom: 20px;
+          width: 60vh;
+          position: relative; 
+         right: 100px;  
+      }
+  
+  }
+  
+  @media only screen and (max-width: 300px){
+  
+  
+    .intro-container{
+        margin-left: 200px;
+    }
+  
+    .image-container{
+        background-color: black;
+        width: 10vh;
+        height: 65vh;
+        margin: 30px 135px;
+        
+    }
+  
+  
+  }
+  
+  @media only screen and (max-width: 1200px){
+  
+    .intro-container{
+        margin-left: 220px;
+    }
+  
+    .image-container{
+        background-color: black;
+        width: 190vh auto;
+        height: 65vh;
+        margin: 30px 135px;
+        
+    }
+  
+  }
+  
+  @media only screen and (max-width: 1470px){
+  
+    .intro-container{
+        margin-left: 300px;
+    }
+  
+  
+  }
