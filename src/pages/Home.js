@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
+import 'antd/dist/antd.css';
 import {MenuOutlined, MailFilled, GithubFilled, LinkedinFilled} from '@ant-design/icons';
 import { Progress } from 'antd';
 import { Validate } from "../Validate";
 import emailjs from '@emailjs/browser';
+import {projects, NodeJsProjects} from "./Projects"
 import "./home.css";
+import { Carousel } from 'antd';
 
 function Home() {
     const [showMenu, setShowMenu] = useState(false)
@@ -15,10 +18,19 @@ function Home() {
       message: "",
     });
 
+    const contentStyle = {
+      height: '180px',
+      color: '#fff',
+      lineHeight: '260px',
+      textAlign: 'center',
+      background: '#364d79',
+    };
+
     const form = useRef();
 
   const sendEmail = () => {
-    emailjs.sendForm('serviceId', 'templateId', form.current, 'userId')
+    //emailjs.sendForm('serviceId', 'templateId', form.current, 'userId')
+    emailjs.sendForm('service_028c6sv', 'template_1x2yaff', form.current, 'user_vXbwNF6JFUfuM6K7JK7Tb')
       .then(() => {
           alert("Email Sent");
       }, (error) => {
@@ -26,34 +38,6 @@ function Home() {
       });
   };
 
-  const projects = [{
-    image: "./portrait.png",
-    header: "E-commerce Application",
-    description: "This application has 'Admin' and 'Customer' account. Admin have the previllage to sell his/her clothing items and can also monitor sells. While customer can only view and but items. view project to learn more. ",
-    preview: "https://favourcj-ecommerce.firebaseapp.com/",
-    frontend: "Reactjs",
-    backend: "Firestore",
-    code: ""
-  },
-  {
-    image: "./portrait.png",
-    header: "E-voting Portal",
-    description: "This application consist of 'Admin and 'Voter' account. Voters can vote and contest for election while, Admin can aprrove or delete contestants, set vote timer and view registered users. Preview project to learn more.",
-    frontend: "Reactjs",
-    backend: "Firestore",
-    preview: "https://favourcj-votingportal.firebaseapp.com/",
-    code: ""
-  },
-  {
-    image: "./portrait.png",
-    header: "Portfolio",
-    description: "This application displays the completed projects I have done so far. Feel free to take a tour",
-    frontend: "Reactjs",
-    backend: "Firestore and Email.js",
-    preview: "https://favourcj-portfolio.web.app/",
-    code: ""
-  },
-]
     //handling submit
     const handleSubmit = (e) =>{
       e.preventDefault();
@@ -72,6 +56,16 @@ function Home() {
             <div className='logo-container'>
                 <p className='logo'> Favour CJ</p>
             </div>
+              <div className='mobile-menu-icon-container'>
+                <button 
+                  className='mobile-menu-icon'
+                  onClick={() =>{
+                    setShowMenu(!showMenu)
+                  }}>
+                <MenuOutlined />
+                </button>
+            </div> 
+            
             <div className='menu-cv'>
             <div className = "menu" id ={showMenu ? "hidden": ""}>
                 <a href='' className='menu-link' rel="noopener noreferrer"> Home </a>
@@ -85,75 +79,75 @@ function Home() {
                  <a className='cv' href="./Favour_Chapp-Jumbo'sCV.pdf" download rel="noopener noreferrer"> Download CV</a> 
                  </div>                 
             </div>   
-
-            <div className='mobile-menu-icon-container'>
-                <button 
-                  className='mobile-menu-icon'
-                  onClick={() =>{
-                    setShowMenu(!showMenu)
-                  }}>
-                <MenuOutlined />
-                </button>
-            </div> 
     </div>
 
-    <div className="image-container" id='home'>
+    <div className="image-container" id ={showMenu ? "hide-image-container-and-experience": ""}>
           <p> Testing</p>      
     </div>
 
-       <div className= "intro-container">
+       <div className= "intro-container" id ={showMenu ? "hide-image-container-and-experience": ""}>
           <p className="intro-p"> <span className="num">2+</span> &nbsp;<span className="experience"> Years Experience</span></p>
           <p className="intro-p"> <span className="num">3</span> &nbsp;<span className="experience"> Completed Projects</span></p>
           <p className="intro-p"> <span className="num">2</span> &nbsp;<span className="experience"> Soft Skills</span></p>
-        </div>
+     </div>
 
-        <div className="skills-container">
-        <h1 className="skills-h1" id='skills'> Technical Skills</h1>
-        <div className="skills">
-  
-          <a href="#web" className="skills-link">
-          <div className="sub-skills"> 
-          <h1 className="web-h1"> Web Development</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Delectus esse commodi deserunt vitae, 
-            vero quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-          </div>
-        </a>
-  
-        <a href="#language" className="skills-link">
-          <div className="sub-skills"> 
-          <h1 className="web-h1"> Programming Languages</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Delectus esse commodi deserunt vitae, 
-            vero quasi! Veniam quaerat tenetur pariatur doloribus.</p>
-          </div>
-        </a>    
-       </div>
-          
-        </div> 
-     
-        <div className="skills-container" id='projects'>
+     <div className="skills-container" id='projects'>
         <h1 className="skills-h1" id='web'> Web Development</h1>
-        <div className="skills">
-          {projects.map((val, key) =>( 
-            <div className="sub-skills-list-web" key={key}>
+        <div className='div-main'>
+        {projects.map((val, key) => (
+          <div className='sub-div' key={key}>
+            <div className='sub-skills-list-web-project'>
+            <h1 className="web-h1"> {val.header}</h1>
+            <Carousel autoplay className='Carousel'>
+                <div>
+                  <img style={contentStyle} className='skill-img' src={val.image1} alt=''/>
+                </div>
+                <div>
+                  <img style={contentStyle} className='skill-img' src={val.image2} alt=''/>
+                </div>
+                <div>
+                  <img style={contentStyle} className='skill-img' src={val.image3} alt=''/>
+                </div>
+              </Carousel>
+             <p className='description-p'>{val.description}</p>
+             <p className='description-language-frontend'>Frontend: {val.frontend}</p>
+             <p className='description-language-backend'>Backend: {val.backend}</p>
+             <a 
+             className='view'
+            href= {val.preview}
+            target= "_blank"
+            rel="noopener noreferrer"> Preview</a>
+           <a className='code' href ={val.code} target= "_blank" rel="noopener noreferrer">  Code</a> 
+            </div>
+            </div>
+        ))}
+
+         {NodeJsProjects.map((val, key) =>( 
+           <div className='sub-div' key={key}>
+            <div className="sub-skills-list-web-project">
               <h1 className="web-h1"> {val.header}</h1>
-              <img className='skill-img' src={val.image} alt=''/>
+              <Carousel autoplay className='Carousel'>
+                <div>
+                  <img style={contentStyle} className='skill-img' src={val.image1} alt=''/>
+                </div>
+                <div>
+                  <img style={contentStyle} className='skill-img' src={val.image2} alt=''/>
+                </div>
+                <div>
+                  <img style={contentStyle} className='skill-img' src={val.image3} alt=''/>
+                </div>
+              </Carousel>
               <p className='description-p'>{val.description}</p>
               <p className='description-language-frontend'>Frontend: {val.frontend}</p>
               <p className='description-language-backend'>Backend: {val.backend}</p>
-              <a 
-              className='view'
-             href= {val.preview}
-             target= "_blank"
-             rel="noopener noreferrer"> Preview</a>
-            <a className='code'>  Code</a> 
+            <a className='view-code' href ={val.code} target= "_blank" rel="noopener noreferrer">View Code</a> 
+            </div>
             </div>
           ))}
-       </div>       
         </div>
+     </div>
 
-        <div className="web-container" id='language'>         
+        <div className="web-container" id='skills'>         
         <h1 className="progress-h1"> Programming Languages</h1>
         <div className="skills">
   
@@ -360,7 +354,7 @@ function Home() {
         <div className='footer'>
             <p className='footer-p'> &copy; Deigned and created by Favour Chapp-Jumbo</p>
 
-        </div>
+        </div>    
     </div>
   )
 }

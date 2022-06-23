@@ -2,7 +2,6 @@
     text-decoration: none;
   }
 
-  
   button{
     cursor: pointer;
   }
@@ -27,8 +26,11 @@
     background-color: transparent;
     color: whitesmoke;
     border: none;
+    justify-content: left;
+    margin-top: 60px;
+    margin-left: -600px;
     display: none;
-    
+  
   }
   
   .menu{
@@ -37,6 +39,8 @@
   
   .menu-cv{
     display: flex;
+    margin-right: 230px;
+    margin-top: 30px;
   }
   
   #hidden {
@@ -60,7 +64,7 @@
     margin-left: 30px;
     font-weight: 600;
     cursor: pointer;
-    font-size: 30px;    
+    font-size: 30px;   
   }
   
   .web-h1{
@@ -77,12 +81,8 @@
     background-color: #FFC107;
     color: black;
     padding: 10px 20px;
-    height: 30px;
+    height: 50px;
     text-decoration: none;
-    
-  }
- .skills-container{
-    margin: 0px 125px 50px;
     
   }
     
@@ -107,8 +107,9 @@
   
   .intro-container{
     display: flex;
-    margin-left: 370px;
+    margin-left: 300px;
     color: #FFC107;
+    margin-bottom: 30px;
   }
   
   .intro-p{
@@ -143,6 +144,10 @@
     margin-right: auto;
    
   }
+
+  .Carousel{
+    height: 43vh;
+  }
   
   .description-language{
     font-size: 15px;
@@ -153,10 +158,27 @@
   .view{
     color: black;
     background-color: #FFC107;
-    font-weight: 600;
+    font-weight: 700;
     padding: 10px 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-right: 20px;
+    font-size: 16px;
+  }
+
+  
+  .view-code{
+    color: black;
+    background-color: #FFC107;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+
+  .view-code:hover{
+    color: white;
+    background-color: transparent;
+    border: 1px solid #FFC107;
   }
   
   .view:hover{
@@ -171,12 +193,12 @@
     padding: 10px 30px;
     font-weight: 600;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
   }
   
   .code:hover{
-    background-color: #ca9907;
+    background-color: #FFC107;
     color: black;
   }
   
@@ -454,15 +476,16 @@
     font-size: 16px;
   }
   
-  .sub-skills-list-web{
+
+  .sub-skills-list-web-project{
     color: whitesmoke;
     margin-right: 40px;
-    padding: 30px 30px;
     background-color: #2c2c3774;
-    width: 370px auto;
-    height: 60vh auto;
+    width: 310px;
+    height: 125vh;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
-    
+    margin-bottom: 40px;
+    padding: 30px 30px 60px;
   }
   
   .email-link{
@@ -483,6 +506,7 @@
   
   .skills{
       display: flex;
+    
   }
   
   .progress-js{
@@ -492,7 +516,21 @@
   .progress{
     margin-top: -12px;
   }
-  
+
+  .web-container{
+    margin-top: -45px;
+  }
+
+  .div-main{
+    color: white;
+    width: 182vh;
+   
+  }
+
+  .sub-div{
+    display: inline-flex;
+  }
+
   .progress-container{
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.39);
     margin-left: 120px; 
@@ -551,24 +589,9 @@
   }
   
   
-  @media only screen and (max-width: 330px){
-    
-    
-      .skills-h1{
-        color: whitesmoke;
-        font-weight: 600;
-        font-size: 24px;
-        margin: 0px 10px 20px;
-       
-      }
-  }
-  
-  
   @media only screen and (max-width: 830px){
-    .landing-container{
-        
-        width: auto;
-        width: auto;
+    .landing-container{    
+        width: 90vh auto;
         height: calc(140vh - 50px) auto;
     }
   
@@ -578,7 +601,7 @@
   
     .cv-container{
         display: none;
-        margin-top: 260px;
+        margin-top: 250px;
         
     }
       
@@ -587,16 +610,23 @@
     font-size: 17px;
     margin-right: 50px;
     color: #FFC107;
-    display: flex;
+    display: inline-flex;
   
+  }
+
+  .div-main{
+    width: 1vh;
+   
+  }
+
+  .web-container{
+    margin-left: 40px;
+    margin-top: 20px;
   }
   
     .cv{
-        width: 130px;
-        border-radius: 10px; 
-        color: #FFC107;
-        background-color: transparent;
-        border: 1px solid #FFC107;   
+        width: 170px; 
+        background-color: #FFC107;  
     }
    
     .cv:hover{
@@ -605,23 +635,32 @@
     }
   
     .mobile-menu-icon{
-        display: flex;
-        margin-right: 30px;
+        margin-top: 60px;
+        margin-left: -450px;
+        display: inline-flex;
+        
     }
+
   
     .all-about{
         position: relative;
-        right: 100px;
+        left: -80px;
         margin-top: 40px;
     }
   
     .about-container{
-        width: 380px;
+        width: 380px auto;
       }
   
       .get-in-touch{
           position: relative;
-          right: 100px;
+          left: -70px;
+      }
+
+      .menu-container{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
       }
   
       .form-container{
@@ -633,14 +672,13 @@
      #hidden {
        position: absolute;
        left: 0px;
-       top: 80px;
+       top: 85px;
        width: 500px;
        background-color: #1F1F29;
-       display: flex;
        flex-direction: column;
        align-items: left;
-       padding-left: 30px;
-       max-height: 300px;
+       max-height: 600px;
+       padding: -0px 20px;
     }
   
     #hidden a {
@@ -649,8 +687,8 @@
     }
   
     .intro-container{
-        position:relative; 
-        right: 240px;
+        position: relative; 
+        left: -220px;
         font-size: 5px;
         color: red;
         margin-bottom: 20px;
@@ -675,6 +713,10 @@
         position:relative; 
         right: 10px;
         
+    }
+
+    #hide-image-container-and-experience{
+      display: none;
     }
   
     .progress-h1{
@@ -714,59 +756,24 @@
   
       .skills-h1{
         color: whitesmoke;
-        font-size: 25px;
-        position: relative; 
-        right: 100px;   
+        font-size: 23px;
+        margin-left: -110px;  
       }
   
-      .sub-skills-list-web{
-          margin-bottom: 20px;
+      .sub-skills-list-web-project{
+          margin-bottom: 40px;
           width: 60vh;
-          position: relative; 
-         right: 100px;  
+          margin-left: -100px; 
       }
-  
-  }
-  
-  @media only screen and (max-width: 300px){
-  
-  
-    .intro-container{
-        margin-left: 200px;
-    }
-  
-    .image-container{
-        background-color: black;
-        width: 10vh;
-        height: 65vh;
-        margin: 30px 135px;
+
+      .skills-container{
+        margin: 0px 155px 50px;
         
-    }
-  
-  
+      }
+
+      .sub-div{
+        display: block;
+      }
   }
   
-  @media only screen and (max-width: 1200px){
   
-    .intro-container{
-        margin-left: 220px;
-    }
-  
-    .image-container{
-        background-color: black;
-        width: 190vh auto;
-        height: 65vh;
-        margin: 30px 135px;
-        
-    }
-  
-  }
-  
-  @media only screen and (max-width: 1470px){
-  
-    .intro-container{
-        margin-left: 300px;
-    }
-  
-  
-  }
