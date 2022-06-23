@@ -30,7 +30,7 @@ function Home() {
 
   const sendEmail = () => {
     emailjs.sendForm('serviceId', 'templateId', form.current, 'userId')
-    //emailjs.sendForm('service_028c6sv', 'template_1x2yaff', form.current, 'user_vXbwNF6JFUfuM6K7JK7Tb')
+    
       .then(() => {
           alert("Email Sent");
       }, (error) => {
