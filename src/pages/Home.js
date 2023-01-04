@@ -29,8 +29,8 @@ function Home() {
     const form = useRef();
 
   const sendEmail = () => {
-    emailjs.sendForm('serviceId', 'templateId', form.current, 'userId')
-    
+    //emailjs.sendForm('serviceId', 'templateId', form.current, 'userId')
+    emailjs.sendForm('service_028c6sv', 'template_1x2yaff', form.current, 'user_vXbwNF6JFUfuM6K7JK7Tb')
       .then(() => {
           alert("Email Sent");
       }, (error) => {
@@ -52,10 +52,11 @@ function Home() {
       }});
     return (
     <div className='landing-container'>
-        <div className='menu-container'>
-            <div className='logo-container'>
+       <div className='logo-container'>
                 <p className='logo'> Favour CJ</p>
             </div>
+        <div className='menu-container'>
+           
               <div className='mobile-menu-icon-container'>
                 <button 
                   className='mobile-menu-icon'
@@ -65,7 +66,8 @@ function Home() {
                 <MenuOutlined />
                 </button>
             </div> 
-            
+
+          
             <div className='menu-cv'>
             <div className = "menu" id ={showMenu ? "hidden": ""}>
                 <a href='' className='menu-link' rel="noopener noreferrer"> Home </a>
@@ -73,32 +75,26 @@ function Home() {
                  <a href='#projects' className='menu-link' rel="noopener noreferrer"> Project </a>
                  <a href='#about' className='menu-link' rel="noopener noreferrer"> About </a>
                  <a href='#contact' className='menu-link' rel="noopener noreferrer"> Contact </a>
-
             </div> 
+            
             <div className='cv-container' id ={showMenu ? "hidden": ""}>
-                 <a className='cv' href="./Favour_Chapp-Jumbo'sCV.pdf" download rel="noopener noreferrer"> Download CV</a> 
+                 <a className='cv' href="./FavourChappJumboResume.pdf" download rel="noopener noreferrer"> Download CV</a> 
                  </div>                 
             </div>   
     </div>
-
+   
     <div className="image-container" id ={showMenu ? "hide-image-container-and-experience": ""}>
           <p> Testing</p>      
     </div>
 
-       <div className= "intro-container" id ={showMenu ? "hide-image-container-and-experience": ""}>
-          <p className="intro-p"> <span className="num">2+</span> &nbsp;<span className="experience"> Years Experience</span></p>
-          <p className="intro-p"> <span className="num">3</span> &nbsp;<span className="experience"> Completed Projects</span></p>
-          <p className="intro-p"> <span className="num">2</span> &nbsp;<span className="experience"> Soft Skills</span></p>
-     </div>
-
-     <div className="skills-container" id='projects'>
-        <h1 className="skills-h1" id='web'> Web Development</h1>
-        <div className='div-main'>
+     <div className=  "skills-container" id= {showMenu ? "shift-skills-container": ""}>
+        <h1 className="skills-h1" id='projects'> Web Development</h1>
+        <div className='div-main' id= {showMenu ? "shift-skills-container": "skills-container"}>
         {projects.map((val, key) => (
           <div className='sub-div' key={key}>
-            <div className='sub-skills-list-web-project'>
+            <div className= 'sub-skills-list-web-project'>
             <h1 className="web-h1"> {val.header}</h1>
-            <Carousel autoplay className='Carousel'>
+            <Carousel className='Carousel'>
                 <div>
                   <img style={contentStyle} className='skill-img' src={val.image1} alt=''/>
                 </div>
@@ -140,7 +136,7 @@ function Home() {
               <p className='description-p'>{val.description}</p>
               <p className='description-language-frontend'>Frontend: {val.frontend}</p>
               <p className='description-language-backend'>Backend: {val.backend}</p>
-            <a className='view-code' href ={val.code} target= "_blank" rel="noopener noreferrer">View Code</a> 
+              <a className='other-view-code' href ={val.code} target= "_blank" rel="noopener noreferrer">View Code</a> 
             </div>
             </div>
           ))}
@@ -152,7 +148,6 @@ function Home() {
         <div className="skills">
   
           <div className="progress-container"> 
-
           <div>
           <div className='percentage'>
           <p className='lan-info'> C++</p>
@@ -169,7 +164,7 @@ function Home() {
           
           <div>
           <div className='percentage'>
-          <p className='lan-info'> Js</p>
+          <p className='lan-info'> JavaScript</p>
           <p className='percent'>80%</p> 
           </div>
           <p className='progress'>
@@ -226,19 +221,6 @@ function Home() {
               
               </div>       
 
-        <div>
-              <div className='percentage'>
-          <p className='lan-info'> Java</p>
-          <p className='percent'>60%</p> 
-          </div>
-          <p className='progress'>
-            <Progress percent={60} strokeColor={{
-          '0%': '#FFC107',
-          '100%': "#FFC107",      
-            }}
-          />
-          </p>
-       </div>
           
           <div>
           <div className='percentage'>
@@ -263,7 +245,7 @@ function Home() {
         <div className="about-container" >
 
         <div className='profile-container'>
-        <img src='edited-photo.png' alt='profile' className='profile'/>     
+        <img src='me.jpg' alt='profile' className='profile'/>     
             </div>
 
             <div> 
